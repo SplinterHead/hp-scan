@@ -10,6 +10,6 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY webhook.py .
+COPY hp-scan/ .
 
 CMD ["python", "webhook.py"]
