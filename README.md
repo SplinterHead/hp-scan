@@ -8,12 +8,14 @@ This project is a middlware that allows a webhook (from services like HomeAssist
 The HP Scan tool will need some configuration to understand where the scanner is and where the documents should end up.
 The easiest way to accomplish this is to use the `.env` template to create one for your environment
 
-|---                    |---        |---            |
-| Variable              | Type      | Description   |
-|---                    |---        |---            |
-| `HP_SCANNER_IP`       | `string`  |               |
-| `SMTP_SENDER_EMAIL`   | `string`  |               |
-| `SMTP_RECIEVER_EMAIL` | `string`  |               |
+| Variable              | Type     | Required | Description                                   |
+|-----------------------|----------|----------|-----------------------------------------------|
+| `HP_SCANNER_IP`       | `string` | Yes      | IP address of the HP Scanner                  |
+| `SMTP_SERVER`         | `string` | Yes      | Hostname / IP of the SMTP server              |
+| `SMTP_SERVER_PORT`    | `int`    | No       | Port for the SMTP server, defaults to 465     |
+| `SMTP_SENDER_EMAIL`   | `string` | Yes      | Email address to send the document from       |
+| `SMTP_SENDER_EMAIL`   | `string` | Yes      | Password of the sender to log into the server |
+| `SMTP_RECIEVER_EMAIL` | `string` | Yes      | Email address to send the document to         |
 
 ## Usage
 
